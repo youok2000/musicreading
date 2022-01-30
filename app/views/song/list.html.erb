@@ -3,7 +3,7 @@
   <div class="song-list">
     <% @songs.each do |song|%>
       <span class="list-pack">
-       <%=link_to(song.title, "/detail/#{song.id}") %>
+       <%=link_to(song.title, "/show/#{song.id}") %>
       </span>
     <% end%>
   </div>

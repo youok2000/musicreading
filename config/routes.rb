@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'target' => 'song#target'
   get 'plan' => 'song#plan'
   get 'list' => 'song#list'
-  get 'detail/:id' => 'song#detail'
+  get 'show/:id' => 'song#show'
 
   post 'song/plans' => 'song#plans'
   post 'song/:id/destroy' => 'song#destroy'

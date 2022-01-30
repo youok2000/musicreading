@@ -14,7 +14,7 @@ class SongController < ApplicationController
   end
 
   def target
-    @songs =Song.new()
+    @song = Song.new()
     session[:rank] = params[:rank]
   end
 
@@ -27,8 +27,8 @@ class SongController < ApplicationController
   def list
     @songs = Song.all
   end
-  def detail
-    @song = Song.find(id: params[:id])
+  def show
+    @songs = Song.find_by(id: params[:id])
   end
 
   def plans
@@ -52,7 +52,7 @@ class SongController < ApplicationController
   end
 
   def destroy
-    @song = Song.find(id: params[:id])
+    @song = Song.find_by(id: params[:id])
     @song.destroy
     redirect_to('/list')
   end
