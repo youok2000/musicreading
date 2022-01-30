@@ -1,0 +1,138 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//トップ画面
+.top-contents{
+  margin:50px ;
+  border-top: 1px solid black;
+}
+
+.arrow-text h2{
+//.arrow-art h2{
+  position: absolute;
+  top: 26px;
+  left: 50px;
+  margin-left: 10px;
+}
+.arrow-art h2{
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  margin-left: 10px;
+}
+.arrow-text p{
+//.arrow-art p{
+  padding: 40px;
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  opacity: 0;
+  transition: .5s;
+}
+.arrow-text p i,
+.arrow-text p strong{
+  display: block;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+}
+.arrow-art p{
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  opacity: 0;
+  transition: .5s;
+}
+.arrow-art a{
+  padding: 20px 20px 20px 0;
+  display: block;
+}
+.arrow-text:hover p{
+  opacity: 1;
+  right: 50px;
+}
+.arrow-art:hover p{
+  opacity: 1;
+  top: 120px;
+}
+
+//矢印コーティング
+.arrow-text,
+.arrow-art{
+  position: relative;
+}
+.arrow-text span,
+.arrow-art span{
+  height: 2px;
+  content: "";
+  background-color: #000000;
+}
+.arrow-text span:nth-child(1){
+//.arrow-art span:nth-child(1){
+ width: 20px;
+ position: absolute;
+ top: 34px;
+ left: 28px;
+ transform: rotateZ(40deg);
+ transition: .5s;
+}
+.arrow-art span:nth-child(1){
+  width: 20px;
+  position: absolute;
+  top: 88px;
+  left: 28px;
+  transform: rotateZ(40deg);
+  transition: .5s;
+}
+.arrow-text span:nth-child(2){
+//.arrow-art span:nth-child(2){
+  width: 35px;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  transform: rotateZ(0deg);
+  transition: .8s;
+}
+.arrow-art span:nth-child(2){
+  width: 35px;
+  position: absolute;
+  top: 94px;
+  left: 10px;
+  transform: rotateZ(0deg);
+  transition: .8s;
+}
+.arrow-text span:nth-child(3){
+//.arrow-art span:nth-child(3){
+  width: 20px;
+  position: absolute;
+  top: 46px;
+  left: 28px;
+  transform: rotateZ(-40deg);
+  transition: .5s;
+}
+.arrow-art span:nth-child(3){
+  width: 20px;
+  position: absolute;
+  top: 100px;
+  left: 28px;
+  transform: rotateZ(-40deg);
+  transition: .5s;
+}
+
+.arrow-text:hover span:nth-child(1),
+.arrow-art:hover span:nth-child(1){
+  width: 25px;
+  transform:rotateZ(29deg);
+}
+.arrow-text:hover span:nth-child(2),
+.arrow-art:hover span:nth-child(2){
+  width: 25px;
+  transform: rotateZ(90deg);
+  left: 17px;
+}
+.arrow-text:hover span:nth-child(3),
+.arrow-art:hover span:nth-child(3){
+  width: 25px;
+  transform: rotateZ(-29deg);
+}

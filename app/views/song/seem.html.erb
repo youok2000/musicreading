@@ -1,0 +1,30 @@
+<div class="seem-contents">
+  <h2>部分ごとに分けて、ランクを付ける</h2>
+
+  <div class="seem-text">
+    <span class="hide-text">ランクを確認する</span>
+    <div class="explanation-text">
+      <p>
+         A:むずかしい B:ふつう C:かんたん
+      </p>
+    </div>
+  </div>
+
+ <%=form_tag('/target', method: 'get') do%>
+ <div class="seem-form">
+
+    <div id="" class="textarea-contents">
+
+      <textarea id="seem-form" class="textarea-form" rows="10px" name="rank" autocomplete="off"></textarea>
+      <label>例:1-14(=1小節～14小節) A</label>
+      <span><i></i></span>
+    </div>
+
+    <div class="completion-btn">
+      <input  id="seem-btn" class="completion" value="完了" type="submit">
+    </div>
+
+ </div>
+ <%end%>
+ 
+</div>

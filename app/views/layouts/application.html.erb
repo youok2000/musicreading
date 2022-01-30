@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicReading</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+
+      <%= link_to('/') do%>
+       <h1>MusicReading</h1>
+      <%end%>
+
+      <nav class="header-navi">
+       <ul>
+         <li><%= link_to('譜読みを可視化する','/information')%></li>
+         <li><%= link_to('譜読みする曲の一覧', '/list')%></li>
+       </ul>
+      </nav>
+
+    </header>
+    <%= yield %>
+  </body>
+</html>

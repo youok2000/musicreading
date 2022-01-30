@@ -1,0 +1,10 @@
+<div class="list-contents">
+  <h2>譜読みの一覧</h2>
+  <div class="song-list">
+    <% @songs.each do |song|%>
+      <span class="list-pack">
+       <%=link_to(song.title, "/detail/#{song.id}") %>
+      </span>
+    <% end%>
+  </div>
+</div>

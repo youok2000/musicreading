@@ -1,0 +1,383 @@
+// Place all the styles related to the song controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+//共通
+
+.information-contents,
+.seem-contents,
+.plan-contents,
+.target-contents,
+.list-contents,
+.detail-contents{
+  margin: 50px;
+}
+.information-form,
+.seem-form,
+.plan-form,
+.target-form{
+  padding:15px 30px;
+	box-sizing: border-box;
+}
+
+//input デコレーション
+
+.input-contents,
+.textarea-contents{
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.input-contents input,
+.textarea-contents textarea{
+	font: 15px/24px sans-serif;
+	width: 100%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+	box-sizing: border-box;
+}
+.input-contents input:focus,
+.textarea-contents textarea:focus{
+	outline: none;
+}
+
+.input-form,
+.textarea-form{
+	padding: 7px 16px;
+	border: 1px solid rgb(32, 32, 75);
+	transition: 0.4s;
+	background: transparent;
+}
+  //横線（赤）
+.input-form~span::before,
+.input-form~span::after,
+.textarea-form~span::before,
+.textarea-form~span::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 0;
+	height: 2px;
+	content: "";
+	transition: 0.3s;
+	background: red;
+}
+.input-form~span::after{
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 0;
+}
+.textarea-form~span::after{
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 6px;
+}
+.input-form:focus~span::before,
+.input-form:focus~span::after,
+.textarea-form:focus~span::before,
+.textarea-form:focus~span::after{
+	width: 100%;
+	transition: 0.3s;
+}
+  //縦線（赤）
+.input-form~span i::before,
+.input-form~span i::after,
+.textarea-form~span i::before,
+.textarea-form~span i::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 2px;
+	height: 0;
+	content: "";
+	transition: 0.4s;
+	background: red;
+}
+.input-form~span i::after{
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 0;
+}
+.textarea-form~span i::after{
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 6px;
+}
+.input-form:focus~span i::before,
+.input-form:focus~span i::after{
+	height: 100%;
+	transition: 0.4s;
+}
+.textarea-form:focus~span i::before,
+.textarea-form:focus~span i::after{
+	height: 92%;
+	transition: 0.4s;
+}
+  //label
+.input-form~label,
+.textarea-form~label{
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 10px;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color:#aaaaaa ;
+}
+.input-form:focus~label,
+.textarea-form:focus~label{
+	font-size: 20px;
+	top: -30px;
+	left: 0;
+	transition: 0.3s;
+	color: red;
+}
+
+//完了ボタン
+.completion-btn{
+	margin: 10px 3%;
+	width:80%;
+}
+.completion-btn input{
+  padding: 13px 30px;
+	border-radius: 3px;
+	font: 16px/15px sans-serif;
+}
+.completion{
+	background:transparent;
+	color: black;
+	box-shadow: 2px 2px 1px;
+	transition: .3s;
+	border: 1px solid rgb(23, 23, 63);
+}
+.completion:hover{
+	background: rgb(252, 114, 114);
+	color:white;
+	box-shadow: 3px 3px 1px black;
+	transition: .3s;
+}
+.completion:active{
+	box-shadow: none;
+	position: relative;
+	top: 3px;
+}
+
+//seemページ
+.seem-text{
+	position: relative;
+	margin-bottom:50px;
+ }
+.explanation-text{
+	color: white;
+	font-size: 20px;
+	border-radius: 4px;
+	width: 30%;
+	//margin:10px 0 10px 10px;
+	padding: 10px 0;
+	text-align: center;
+	background:rgb(91, 129, 253) ;
+//	line-height: 30px;
+	transition: .5s;
+}
+.explanation-text{
+  position: absolute;
+	top: 0px;
+	right: 0px;
+	opacity: 0;
+}
+.hide-text{
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	font-size: 20px;
+	border-bottom: 2px solid rgb(26, 26, 44);
+	transition: .6s;
+}
+.hide-text:hover{
+	border-bottom: 1px solid white;
+}
+.hide-text:hover~.explanation-text{
+  right: 30px;
+	opacity: 1;
+}
+
+
+#seem-btn:hover{
+	background: rgb(91, 129, 253);
+}
+
+#seem-form:focus~span i::before,
+#seem-form:focus~span i::after{
+	height: 98%;
+}
+
+#seem-form~span::before,
+#seem-form~span::after,
+#seem-form~span i::before,
+#seem-form~span i::after{
+	background-color: rgb(109, 109, 250);
+}
+#seem-form:focus~label{
+	color: rgb(89, 89, 243);
+}
+
+//planページ
+
+#plan-btn:hover{
+	background: rgb(85, 134, 78);
+}
+
+#plan-form:focus~span i::before,
+#plan-form:focus~span i::after{
+	height: 98%;
+}
+
+#plan-form~span::before,
+#plan-form~span::after,
+#plan-form~span i::before,
+#plan-form~span i::after{
+	background-color: rgb(85, 134, 78);
+}
+#plan-form:focus~label{
+	color: rgb(85, 134, 78);
+}
+
+//targetページ
+
+#target-btn:hover{
+	background: rgb(175, 150, 81);
+}
+
+#target-form:focus~span i::before,
+#target-form:focus~span i::after{
+	height: 98%;
+}
+
+#target-form~span::before,
+#target-form~span::after,
+#target-form~span i::before,
+#target-form~span i::after{
+	background-color: rgb(175, 150, 81);
+}
+#target-form:focus~label{
+	color: rgb(175, 150, 81);
+}
+
+//detailページ
+.detail-contents{
+	word-break: break-all;
+ }
+ .detail-navi{
+	 padding: 20px;
+	 margin-bottom: 10px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+ }
+ .detail-navi a{
+	 border-bottom: 1px solid black;
+ }
+ .detail-navi h2 span{
+	 font-weight: normal;
+	 font-size: 15px;
+	 margin-left: 15px;
+ }
+//top
+.detail-top{
+	display: flex;
+}
+.detail-top h3{
+	text-align: center;
+}
+//top-left
+.detail-left{
+	padding-top: 10px;
+	width: 40%;
+	border: 1px solid black;
+}
+.detail-left dl{
+	padding: 15px;
+}
+.detail-left dt{
+	width: 15%;
+	text-align: right;
+	float: left;
+	margin:0  5px 10px 0;
+}
+.detail-left dd{
+	text-align: left;
+	margin-bottom: 10px;
+}
+//top-right
+.detail-right{
+	padding-top: 10px;
+	width: 60%;
+	margin-left: 5px;
+	border: 1px solid black;
+}
+.detail-right p{
+	max-width: 100%;
+	max-height: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+ //centerとbottom
+.detail-center,
+.detail-bottom{
+ padding: 10px 0 0 10px;
+ margin-top: 30px;
+ border: 1px solid black;
+}
+.detail-target span,
+.detail-plan span{
+	display: block;
+	padding: 20px;
+}
+.detail-target span p,
+.detail-plan span p{
+	width: 8%;
+	margin-bottom: 5px;
+}
+//listページ
+.song-list{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	padding: 15px 5px;
+	box-sizing: border-box;
+}
+.list-pack{
+	position: relative;
+	top: 7px;
+	font-size: 15px;
+	text-align: center;
+	width: 70%;
+	border: 1.3px solid rgb(18, 18, 34);
+	border-radius: 5px;
+	margin: 0 auto 40px auto;
+	box-shadow:none;
+	transition: .3s;
+}
+.list-pack:hover{
+	box-shadow:  7px 7px 2px rgb(77, 75, 75);
+	top: 0px;
+}
+.list-pack a{
+	display: block;
+	padding: 20px 0;
+	width: 100%;
+	height: 100%;
+}

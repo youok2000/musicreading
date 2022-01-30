@@ -1,0 +1,26 @@
+<div class="target-contents">
+  <h2>目標を立てる</h2>
+  
+  <%= form_tag('/plan', method: 'get') do%>
+ <div class="target-form">
+
+  <div id="" class="textarea-contents">
+    <textarea id="target-form" class="textarea-form" rows="10px" name="partTarget" autocomplete="off"></textarea>
+    <label>部分ごとの目標</label>
+    <span><i></i></span>
+  </div>
+
+  <div id="" class="textarea-contents">
+      <textarea id="target-form" class="textarea-form" rows="10px" name="overallTarget" autocomplete="off"></textarea>
+      <label>全体の目標</label>
+      <span><i></i></span>
+  </div>
+
+  <div class="completion-btn">
+    <input  id="target-btn" class="completion" value="完了" type="submit">
+  </div>
+
+ </div>
+ <%end%>
+ 
+</div>

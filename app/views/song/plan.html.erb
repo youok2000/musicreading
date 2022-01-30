@@ -1,0 +1,27 @@
+<div class="plan-contents">
+  <h2>計画を立てる</h2>
+  
+ <%= form_tag('/song/plans') do%>
+ <div class="plan-form">
+
+  <div id="" class="textarea-contents">
+    <textarea id="plan-form" class="textarea-form" rows="10px" name="partPlan" autocomplete="off"></textarea>
+    <label>部分ごとの計画</label>
+    <span><i></i></span>
+  </div>
+
+  <div id="" class="textarea-contents">
+      <textarea id="plan-form" class="textarea-form" rows="10px" name="overallPlan" autocomplete="off"></textarea>
+      <label>全体の計画</label>
+      <span><i></i></span>
+  </div>
+
+  <div class="completion-btn">
+      <input  id="plan-btn" class="completion" value="完了" type="submit">
+    </div>
+
+  </div>
+ </div>
+ <%end%>
+ 
+</div>

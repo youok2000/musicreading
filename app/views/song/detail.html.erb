@@ -1,0 +1,36 @@
+<div class="detail-contents">
+  <div class="detail-navi">
+   <h2>曲の詳細<span>楽譜に書き写してください</span></h2>
+   <%= link_to('削除する', "/song/#{@song.id}/destroy", {method: 'post'})%>
+  </div>
+  <div class="detail-top">
+    <div class="detail-left">
+      <h3>曲の情報</h3>
+      <dl>
+        <dt>曲名:</dt><dd><%= @song.title%></dd>
+        <dt>作曲家:</dt><dd><%= @song.composer%></dd>
+        <dt>時代:</dt><dd><%= @song.age%></dd>
+        <dt>調性:</dt><dd><%= @song.tonality%></dd>
+        <dt>構成:</dt><dd><%= @song.composition%></dd>
+      </dl>
+    </div>
+    <div class="detail-right">
+      <h3>部分ごとのランク</h3>
+       <p><%= @song.rank%></p>
+    </div>
+  </div>
+  <div class="detail-center">
+    <h3>目標</h3>
+    <div class="detail-target">
+      <span><p>部分目標</p><%= @song.partTarget%></span>
+      <span><p>全体目標</p><%= @song.overallTarget%></span>
+    </div>
+  </div>
+  <div class="detail-bottom">
+    <h3>計画</h3>
+    <div class="detail-plan">
+      <span><p>部分計画</p><%= @song.partPlan%></span>
+      <span><p>全体計画</p><%= @song.overallPlan%></span>
+    </div>
+  </div>
+</div>
