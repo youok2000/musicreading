@@ -25,4 +25,3 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  #database: db/production.sqlite3

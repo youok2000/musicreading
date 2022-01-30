@@ -1,7 +1,7 @@
 class SongController < ApplicationController
 
   def information
-    @songs = Song.new()
+    @songs = Song.new()    
   end
 
   def seem
@@ -28,7 +28,7 @@ class SongController < ApplicationController
     @songs = Song.all
   end
   def detail
-    @song = Song.find_by(id: params[:id])
+    @song = Song.find(id: params[:id])
   end
 
   def plans
@@ -52,7 +52,7 @@ class SongController < ApplicationController
   end
 
   def destroy
-    @song = Song.find_by(id: params[:id])
+    @song = Song.find(id: params[:id])
     @song.destroy
     redirect_to('/list')
   end

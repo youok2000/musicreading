@@ -1,45 +1,44 @@
 <div class="information-contents">
   <h2>曲の情報を入力</h2>
 
-  <%=form_tag('/seem', method: 'get') do %>
-  <div class="information-form">
+  <%=form_tag('/seem', {method: "get"}) do %>
+    <div class="information-form">
+      <div class="input-contents">
+        <input class="input-form" name="title" type="text" autocomplete="off">
+        <label>曲名</label>
+        <span><i></i></span>
+      </div>
 
-    <div class="input-contents">
-      <input class="input-form" name="title" type="text" autocomplete="off">
-      <label>曲名</label>
-      <span><i></i></span>
+      <div class="input-contents">
+        <input class="input-form" name="composer" type="text" autocomplete="off">
+        <label>作曲家</label>
+        <span><i></i></span>
+      </div>
+
+      <div class="input-contents">
+        <input class="input-form" name="age" type="text" autocomplete="off">
+        <label>時代</label>
+        <span><i></i></span>
+      </div>
+
+      <div class="input-contents">
+        <input class="input-form" name="tonality" type="text" autocomplete="off">
+        <label>調性</label>
+        <span><i></i></span>
+      </div>
+
+      <div class="textarea-contents">
+        <textarea class="textarea-form" name="composition" autocomplete="off"></textarea>
+        <label>構成</label>
+        <span><i></i></span>
+      </div>
+
+
+      <div class="completion-btn">
+        <input class="completion" value="完了" type="submit">
+      </div>
+
     </div>
-
-    <div class="input-contents">
-      <input class="input-form" name="composer" type="text" autocomplete="off">
-      <label>作曲家</label>
-      <span><i></i></span>
-    </div>
-
-    <div class="input-contents">
-      <input class="input-form" name="age" type="text" autocomplete="off">
-      <label>時代</label>
-      <span><i></i></span>
-    </div>
-
-    <div class="input-contents">
-      <input class="input-form" name="tonality" type="text" autocomplete="off">
-      <label>調性</label>
-      <span><i></i></span>
-    </div>
-
-    <div class="textarea-contents">
-      <textarea class="textarea-form" name="composition" autocomplete="off"></textarea>
-      <label>構成</label>
-      <span><i></i></span>
-    </div>
-
-
-    <div class="completion-btn">
-      <input class="completion" value="完了" type="submit">
-   </div>
-
-  </div>
   <%end%>
   
 </div>
